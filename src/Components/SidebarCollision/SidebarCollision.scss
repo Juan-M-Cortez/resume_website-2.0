@@ -1,0 +1,9 @@
+.app__collision {
+    min-width: 20rem;
+    height: 100%;
+    background-color: rgb(74, 74, 155);
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+}
