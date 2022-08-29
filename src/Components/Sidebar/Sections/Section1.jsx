@@ -1,8 +1,31 @@
-import React from 'react'
+import Me from '../../../assets/me.jpg';
+import React from 'react';
+import './Section1.scss';
 
 const Section1 = () => {
     return (
-        <div className='sidebar__section1'>
+        <div className='appbar__section1'>
+        
+            <div className='appbar___section1-div'>
+
+                <div className='appbar__section1-div-img'>
+                    <img src={Me} alt='profile_pic' className='img-pic' />
+                    <div className='pulse-div'></div>
+                    <div className='pulse-color'></div>
+                </div>
+
+                <h5 className='appbar__section1-h5'>Juan Cortez</h5>
+                <p className='appbar__section1-p p-sub'>Front-end Developer</p>
+                <p className='appbar__section1-p p-sub'>Ui/UX Designer</p>
+            </div>
+        </div>
+    );
+};
+
+export default Section1;
+
+/*
+<div className='sidebar__section1'>
 
                 <div className='sidebar__section1-profilepic'>
                     <img alt='profile_pic' className='sidebar__section1-img' />
@@ -14,7 +37,4 @@ const Section1 = () => {
                 <p className='sidebar__section1-p1'>Front-end Developer</p>
                 <p className='sidebar__section1-p2'>Ui/UX Designer</p>
         </div>
-    )
-}
-
-export default Section1
+*/

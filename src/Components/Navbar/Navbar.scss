@@ -6,7 +6,7 @@
     align-items: center;
 
     padding: 1rem 2rem;
-    background-color: rgba(37,37,50,0.2); 
+    background:linear-gradient(159deg,rgba(37,37,50,.98) 0%,rgba(35,35,45,.98) 100%);
     /* background-image: var(--lesser-imgcolor);*/
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -61,11 +61,14 @@
 
             text-transform: uppercase;
             font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 1.3rem;
 
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                color: var(--secondary-color);
+                font-size: 1.3rem;
+                /* color: var(--secondary-color); */
             }
         }
 

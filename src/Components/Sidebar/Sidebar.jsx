@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Section1, Section2 } from './Sections';
+import { Section1, Section2, Section3} from './Sections';
 import './Sidebar.scss';
 
 const Sidebar = () => {
@@ -12,9 +12,11 @@ const Sidebar = () => {
   }, []);
  
   return (
-    <div className='app__sidebar' style={{ marginTop: navHeight }}>
+    <div className='appbar__sidebar' style={{ paddingTop: navHeight }}>
       <Section1 />
-      
+      <Section2 />
+      <Section3 />
+      {/*<Section4 />*/}
     </div>
   );
 };

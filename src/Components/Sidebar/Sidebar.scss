@@ -1,11 +1,11 @@
-.app__sidebar {
+.appbar__sidebar {
     display: flex;
     flex-direction: column;
     text-align: center;
     min-width: 20rem;
     height: 100%;
     position: fixed;
-    background-color: rgba(105, 131, 179, 0.555);
+    background-color: var(--main-color);
     
     
 
@@ -13,6 +13,7 @@
         display: none;
     }
 }
+
 /*
     
     

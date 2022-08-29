@@ -8,10 +8,13 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   return (
     <nav className='app__navbar'>
-      {/*----------------------BLOCK----------------------*/}
+    
+      {/*----------------------BLOCK----------------------
       <div className='app__navbar-logo'>
         <img src={images.logoTemp} alt="logo" />
       </div>
+      */}
+
       {/*----------------------BLOCK----------------------*/}
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item) =>
@@ -23,7 +26,7 @@ const Navbar = () => {
       </ul>
       {/*----------------------BLOCK----------------------*/}
       <div className='app__navbar-menu'>
-        
+
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
         {toggle && (

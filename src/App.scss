@@ -1,4 +1,4 @@
-.nav-side_split {
+.appbar {
   display: flex;
   /* background-color: var(--main-color); */
   font-family: var(--font-base);
@@ -87,6 +87,16 @@
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
   }
+}
+
+.p-main {
+  color: var(--white-color);
+  font-size: 1.2rem;
+}
+
+.p-sub {
+  color: var(--secondary-pcolor);
+  font-size: 1.2rem;
 }
 
 .bold-text {
@@ -184,6 +194,7 @@
 }
 
 @media screen and (max-width: 500px) {
+
   .app__navigation,
   .app__social {
     display: none;
