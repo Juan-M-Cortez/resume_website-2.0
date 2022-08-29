@@ -16,7 +16,7 @@ const Section1 = () => {
 
                 <h5 className='appbar__section1-h5'>Juan Cortez</h5>
                 <p className='appbar__section1-p p-sub'>Front-end Developer</p>
-                <p className='appbar__section1-p p-sub'>Ui/UX Designer</p>
+                <p className='appbar__section1-p p-sub'>React JS Designer</p>
             </div>
         </div>
     );

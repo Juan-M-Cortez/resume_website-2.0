@@ -6,7 +6,7 @@ const Section3 = () => {
         <div className='sidebar__section3'>
 
             <div className='part3-divH6-container'>
-                <h6 className='part3-h6'>Laguages</h6>
+                <h6 className='part3-h6 p-main'>Laguages</h6>
             </div>
             
             <div className='part3-container'>
@@ -18,7 +18,7 @@ const Section3 = () => {
                         </svg>
                         <div className='part3-p'>100%</div>
                     </div>
-                    <p className='part3-lp'>English</p>
+                    <p className='p-main'>English</p>
                 </div>
 
                 <div className='svg-container'>
@@ -28,7 +28,7 @@ const Section3 = () => {
                         </svg>
                         <div className='part3-p'>100%</div>
                     </div>
-                    <p className='part3-lp'>Spanish</p>
+                    <p className='p-main'>Spanish</p>
                 </div>
 
                 <div className='svg-container'>
@@ -39,7 +39,7 @@ const Section3 = () => {
                         </svg>
                         <div className='part3-p'>25%</div>
                     </div>
-                    <p className='part3-lp'>French</p>
+                    <p className='p-main'>French</p>
                 </div>
 
             </div>
