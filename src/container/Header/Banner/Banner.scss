@@ -1,0 +1,14 @@
+.app__banner {
+    flex: 3 1;
+    height: 500px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(../../../assets/earthInSpace.jpg);
+    background-position: 50%;
+    background-size: cover;
+
+    box-shadow: 2px 3px 4px 1px #000;
+}

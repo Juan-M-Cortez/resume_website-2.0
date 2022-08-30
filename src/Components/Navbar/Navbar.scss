@@ -2,7 +2,7 @@
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 
     padding: 1rem 2rem;
@@ -46,7 +46,8 @@
         flex-direction: column;
 
         div {
-            width: 5px;
+            /* width becomes 0, making the dot disapear
+            width: 5px; */
             height: 5px;
             background: transparent;
             border-radius: 50%;

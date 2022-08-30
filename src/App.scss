@@ -11,11 +11,11 @@
 }
 
 .app__whitebg {
-  background-color: var(--white-color);
+  background-color: var(--container-secondary-color);
 }
 
 .app__primarybg {
-  background-color: var(--primary-color);
+  background-color: var(--container-primary-color);
 }
 
 .app__container {
@@ -62,9 +62,8 @@
   font-size: 2.75rem;
   font-weight: 800;
   text-align: center;
-  color: var(--black-color);
+  color: var(--header-color);
   text-transform: capitalize;
- background-color: var(--third-color);
   span {
     color: var(--white-color);
   }
@@ -202,4 +201,8 @@
   .copyright {
     padding: 2rem;
   }
+}
+
+.padding-top {
+  padding-top: 64px;
 }
