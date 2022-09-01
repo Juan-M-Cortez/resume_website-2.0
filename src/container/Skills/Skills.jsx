@@ -10,6 +10,8 @@ const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
 
+  let countWork = 0;
+
   useEffect(() => {
     const query = '*[_type == "experiences"]';
     const skillsQuery = '*[_type == "skills"]';
@@ -52,7 +54,10 @@ const Skills = () => {
 
         <div className="app__skills-exp">
 
+          {/*----------------------BLOCK: Creating Div Experience----------------------*/}
           {experiences.map((experience) => {
+            countWork++;
+            if (countWork === 1) {
             return (
               <motion.div
                 className="app__skills-exp-item"
@@ -80,6 +85,9 @@ const Skills = () => {
                           <p className="p-text">{work.company}</p>
                         </motion.div>
 
+                        {/*----------------------BLOCK: Tooltip----------------------
+                                        🚧!creates 2 work experiences!🚧
+                        
                         <ReactTooltip
                           id={work.name}
                           effect="solid"
@@ -87,9 +95,11 @@ const Skills = () => {
                           className="skills-tooltip"
                           scrollHide={true}
                         >
-                          Test
+                          {work.Desc}
+                          
                           <button onClick={() => { ReactTooltip.hide() }}></button>
                         </ReactTooltip>
+                        */}
 
                       </React.Fragment>
                     )
@@ -97,8 +107,10 @@ const Skills = () => {
 
                 </motion.div>
               </motion.div>
-            )
+            )}
+            else return console.log('');
           })}
+          {/*----------------------BLOCK-END: Creating Div Experience----------------------*/}
         </div>
         
       </div>

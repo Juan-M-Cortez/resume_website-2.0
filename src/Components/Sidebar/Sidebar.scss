@@ -7,7 +7,7 @@
     position: fixed;
     background-color: var(--main-color);
     
-    
+    z-index: 2;
 
     @media screen and (max-width: 900px) {
         display: none;

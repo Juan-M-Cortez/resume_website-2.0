@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import SocialMedia from '../SocialMedia';
 import { Section1, Section2, Section3} from './Sections';
 import Separation from './Separation/Separation';
 import './Sidebar.scss';
@@ -19,6 +20,7 @@ const Sidebar = () => {
       <Separation />
       <Section3 />
       {/*<Section4 />*/}
+      <SocialMedia />
     </div>
   );
 };

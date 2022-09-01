@@ -1,5 +1,5 @@
 import { About, Footer, Header, Skills, Testimonial, Work } from './container';
-import { Navbar, Sidebar, SidebarCollision } from './Components';
+import { Navbar, NavigationDots, Sidebar, SidebarCollision } from './Components';
 import React from 'react';
 import './App.scss';
 

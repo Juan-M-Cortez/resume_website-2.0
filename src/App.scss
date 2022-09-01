@@ -64,6 +64,8 @@
   text-align: center;
   color: var(--header-color);
   text-transform: capitalize;
+  padding-top: 64px;
+
   span {
     color: var(--white-color);
   }
@@ -114,11 +116,11 @@
 
 .app__social {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-
-  padding: 1rem;
+  //flex-direction: column;
+  height: 100%;
+  //padding: 1rem;
 
   div {
     width: 40px;
@@ -135,8 +137,8 @@
     transition: all 0.3s ease-in-out;
 
     svg {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
       color: var(--gray-color);
     }
 
@@ -205,4 +207,26 @@
 
 .padding-top {
   padding-top: 64px;
+}
+
+.margin-top {
+  margin-top: 64px;
+}
+
+.app__navigation-collision-dot {
+  //background-color: #cbcbcb;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0.5rem;
+  transition: background-color .2s ease-in-out;
+  width: 10px;
+  
+}
+
+.social-a {
+  height: 20px;
+}
+
+.a-cert {
+  text-decoration: none;
 }

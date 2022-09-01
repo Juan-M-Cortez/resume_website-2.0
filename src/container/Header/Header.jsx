@@ -23,7 +23,7 @@ const Header = () => (
         
         {/*----------------------BLOCK----------------------
                           💭Welcome Bubbles💭
-        */}
+        
         <motion.div
             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
@@ -31,8 +31,9 @@ const Header = () => (
         >
 
             <div className="app__header-badge">
+            */}
 
-                {/*---NestedBlock---*/}
+                {/*---NestedBlock---
                 <div className="badge-cmp app__flex">
                     <span>👋</span>
                     <div style={{ marginLeft: 20 }}>
@@ -40,8 +41,9 @@ const Header = () => (
                         <h1 className="head-text head-text-overwrite">Juan</h1>
                     </div>
                 </div>
+                */}
 
-                {/*---NestedBlock---*/}
+                {/*---NestedBlock---
                 <div className="tag-cmp app__flex">
                     <p className="p-main">Web Developer</p>
                     <p className="p-main">Freelancer</p>
@@ -49,18 +51,20 @@ const Header = () => (
 
             </div>
         </motion.div>
+        
 
         {/*----------------------BLOCK----------------------
                           📷Middle Picture📷
         */}
             <Banner />
-        {/*----------------------BLOCK----------------------*/}
+        {/*----------------------BLOCK----------------------
         <motion.div
             variants={scaleVariants}
             whileInView={scaleVariants.whileInView}
             className="app__header-circles"
         >
-             {/*---NestedMap---*/}
+        */}
+             {/*---NestedMap---
             {[images.flutter, images.redux, images.sass].map((circle, index) => (
                 <div className="circle-cmp app__flex" key={`circle-${index}`}>
                     <img src={circle} alt="profile_bg" />
@@ -68,12 +72,31 @@ const Header = () => (
             ))}
 
         </motion.div>
-
+                */}
 
     </div>
 );
 
 export default AppWrap(Header, 'home');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*

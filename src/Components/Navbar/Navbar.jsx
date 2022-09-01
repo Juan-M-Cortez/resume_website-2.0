@@ -15,16 +15,19 @@ const Navbar = () => {
       </div>
       */}
 
-      {/*----------------------BLOCK----------------------*/}
+      {/*----------------------BLOCK: Desktop Nav----------------------*/}
       <ul className='app__navbar-links'>
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) =>
+        {['home', 'certificates', 'projects', 'skills', 'testimonials', 'contact'].map((item) => {
+          return (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
           </li>
+          )
+        }
         )}
       </ul>
-      {/*----------------------BLOCK----------------------*/}
+      {/*----------------------BLOCK: Mobile Nav----------------------*/}
       <div className='app__navbar-menu'>
 
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -36,7 +39,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) =>
+              {['home', 'certificates', 'projects', 'skills', 'testimonials', 'contact'].map((item) =>
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                 </li>
