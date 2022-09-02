@@ -3,7 +3,6 @@ import { Navbar, NavigationDots, Sidebar, SidebarCollision } from './Components'
 import React from 'react';
 import './App.scss';
 
-
 const App = () => {
   return (
     <div className='appbar'>
