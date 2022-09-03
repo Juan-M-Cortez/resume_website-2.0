@@ -18,13 +18,14 @@
   font-family: 'Share Tech Mono', monospace !important;
 }
 
+/*
 @media screen and (max-width: 1200px){s
-  .typewriter h1 {
-    font-size: none !important;
+  .typewriter-h1 {
+    font-size: x-large;
   }
 }
-
-@media screen and (max-width: 800px) {
+*/
+@media screen and (max-width: 1200px) {
   .typewriter h1 {
     font-size: x-large;
   }
