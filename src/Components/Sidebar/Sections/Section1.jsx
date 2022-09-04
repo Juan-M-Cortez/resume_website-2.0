@@ -1,7 +1,6 @@
 import Me from '../../../assets/me.jpg';
 import React from 'react';
 import './Section1.scss';
-import { Container } from 'reactstrap';
 
 const Section1 = () => {
     return (
@@ -11,8 +10,10 @@ const Section1 = () => {
 
                 <div className='appbar__section1-div-img'>
                     <img src={Me} alt='profile_pic' className='img-pic' />
-                    <div className='pulse-div'></div>
-                    <div className='pulse-color'></div>
+                    <div className='pulse-alignment-div'>
+                        <span className='pulse-div'></span>
+                        <span className='pulse-color'></span>
+                    </div>
                 </div>
                 <div className='testing1'>
                     <h5 className='appbar__section1-h5'>Juan Cortez</h5>

@@ -21,28 +21,24 @@
 }
 
 .pulse-div {
-    position: absolute;
     border-radius: 50%;
     height: 28px;
     width: 28px;
-    right: 91px;
-    top: 214.4px;
     z-index: 0;
+
+    position:absolute;
     -webkit-animation: pulse 1s infinite;
     animation: pulse 1s infinite;
 }
 
 .pulse-color {
-    display: block;
-    position: relative;
-    background-color: #ffc107;
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    right: -115px;
-    top: -35px;
+    z-index: 1;
+
     opacity: 6;
-    z-index: 2;
+    background-color: #ffc107;
 }
 
 .appbar__section1-h5 {
@@ -55,4 +51,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.pulse-alignment-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 259px;
+    margin-top: 6rem;
+    margin-left: 6rem;
+
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+
+    position: absolute;
+} 
+
+.appbar__section1-div-img {
+    margin-bottom: 30px;
+}
+
+.appbar__section1-p {
+    margin-top: 0;
 }
