@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Separation from '../Sidebar/Separation/Separation';
 import SocialMedia from '../SocialMedia';
 import './MobileBar.scss';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 const MobileBar = () => {
     const [navHeight, setNavHeight] = useState(0)
@@ -24,4 +25,8 @@ const MobileBar = () => {
     );
 };
 
-export default MobileBar;
+export default AppWrap(
+    MotionWrap(MobileBar, 'app__mobilebar'),
+    'profile',
+    'app__primarybg',
+);

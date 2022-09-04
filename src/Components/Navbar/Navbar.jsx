@@ -40,7 +40,7 @@ const Navbar = () => {
 
             {/*----Dropdown: Menu-List----*/}
             <ul className='menu'>
-              {['home', 'certificates', 'projects', 'skills', 'testimonials', 'contact'].map((item) =>
+              {['profile', 'certificates', 'projects', 'skills', 'testimonials', 'contact'].map((item) =>
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                 </li>
