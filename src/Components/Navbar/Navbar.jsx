@@ -32,22 +32,26 @@ const Navbar = () => {
 
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
-        {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: 'easeOut' }}
+        {toggle && ( <motion.div
+            whileInView={{ y: [0, 320] }}
+            transition={{ duration: .45, ease: 'easeOut' }}
           >
             <HiX onClick={() => setToggle(false)} />
-            <ul>
+
+            {/*----Dropdown: Menu-List----*/}
+            <ul className='menu'>
               {['home', 'certificates', 'projects', 'skills', 'testimonials', 'contact'].map((item) =>
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                 </li>
 
               )}
+
             </ul>
+
           </motion.div>
         )
+        
         }
 
       </div>
