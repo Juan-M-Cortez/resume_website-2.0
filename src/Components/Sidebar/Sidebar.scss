@@ -22,7 +22,7 @@
         
         background-color: var(--main-color);
         overflow-y: initial;
-        z-index: auto;
+        z-index: 0;
 
     }
 
@@ -38,7 +38,7 @@
 
         /* Track */
         &::-webkit-scrollbar-track {
-            background: var(--main-color);
+            background: #181820;
             z-index: 2;
         }
 

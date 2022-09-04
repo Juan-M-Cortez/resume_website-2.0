@@ -4,7 +4,7 @@ import './Section3.scss';
 const Section3 = () => {
     return (
         <div className='sidebar__section3'>
-
+            {/*------------------Languages /section/------------------*/}
             <div className='part3-divH6-container'>
                 <h6 className='part3-h6 p-main'>Laguages</h6>
             </div>
