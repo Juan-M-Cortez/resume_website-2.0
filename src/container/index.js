@@ -11,5 +11,5 @@ export {
   Header,
   Skills,
   Testimonial,
-  Work,
+  Work
 };

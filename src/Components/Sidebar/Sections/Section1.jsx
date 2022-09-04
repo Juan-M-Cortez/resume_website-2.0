@@ -1,11 +1,12 @@
 import Me from '../../../assets/me.jpg';
 import React from 'react';
 import './Section1.scss';
+import { Container } from 'reactstrap';
 
 const Section1 = () => {
     return (
         <div className='appbar__section1'>
-        
+
             <div className='appbar___section1-div'>
 
                 <div className='appbar__section1-div-img'>
@@ -13,10 +14,11 @@ const Section1 = () => {
                     <div className='pulse-div'></div>
                     <div className='pulse-color'></div>
                 </div>
-
-                <h5 className='appbar__section1-h5'>Juan Cortez</h5>
-                <p className='appbar__section1-p p-sub'>Front-end Developer</p>
-                <p className='appbar__section1-p p-sub'>React JS Designer</p>
+                <div className='testing1'>
+                    <h5 className='appbar__section1-h5'>Juan Cortez</h5>
+                    <p className='appbar__section1-p p-sub'>Front-end Developer</p>
+                    <p className='appbar__section1-p p-sub'>React JS Designer</p>
+                </div>
             </div>
         </div>
     );

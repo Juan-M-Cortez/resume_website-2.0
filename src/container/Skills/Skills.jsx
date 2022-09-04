@@ -58,6 +58,7 @@ const Skills = () => {
           {experiences.map((experience) => {
             countWork++;
             if (countWork === 1) {
+            /*----------------------1st: IF----------------------*/
             return (
               <motion.div
                 className="app__skills-exp-item"
@@ -108,6 +109,7 @@ const Skills = () => {
                 </motion.div>
               </motion.div>
             )}
+            /*----------------------2nd: ELSE----------------------*/
             else return console.log('');
           })}
           {/*----------------------BLOCK-END: Creating Div Experience----------------------*/}

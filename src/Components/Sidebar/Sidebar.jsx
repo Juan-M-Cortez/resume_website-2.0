@@ -17,7 +17,6 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <SimpleBar style={{ maxHeight: 300 }}>
     <div className='appbar__sidebar' style={{ paddingTop: navHeight }}>
         <Section1 />
         <Section2 />
@@ -26,7 +25,6 @@ const Sidebar = () => {
         {/*<Section4 />*/}
         <SocialMedia />
     </div>
-    </SimpleBar>
   );
 };
 

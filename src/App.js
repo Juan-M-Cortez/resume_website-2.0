@@ -1,24 +1,66 @@
 import { About, Footer, Header, Skills, Testimonial, Work } from './container';
 import { Navbar, NavigationDots, Sidebar, SidebarCollision } from './Components';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
+import MobileBar from './Components/MobileBar/MobileBar';
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
 
 const App = () => {
-  return (
-    <div className='appbar'>
-      <Navbar />
-      <Sidebar />
-      <SidebarCollision />
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  console.log(windowDimensions.width);
+
+  /*------------------Desktop View | Tablet------------------*/
+  if (windowDimensions.width > 900) {
+    return (
+      <div className='appbar'>
+        <Navbar />
+        <Sidebar />
+        <SidebarCollision />
+        <div className='app'>
+          <Header />
+          <About />
+          <Work />
+          <Skills />
+          <Testimonial />
+          <Footer />
+        </div>
+      </div>
+    );
+  }
+  /*------------------Mobile View------------------*/
+  else {
+    return (
       <div className='app'>
-        <Header />
+        <Navbar />
+        <MobileBar />
         <About />
         <Work />
         <Skills />
         <Testimonial />
         <Footer />
       </div>
-    </div>
-  );
+    );
+  }
+
+
 }
 
 export default App;
