@@ -26,6 +26,7 @@ const App = () => {
   }, []);
 
   console.log(windowDimensions.width);
+  console.log(test);
 
   /*------------------Desktop View | Tablet------------------*/
   if (windowDimensions.width > 900) {
