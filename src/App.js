@@ -1,9 +1,9 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // import NasaApi from './Projects/NasaApi/NasaApi';
 import Portfolio from './Portfolio';
 import React from 'react'
 // import SpaceObjects from './Projects/NasaApi/container/SpaceObjects/SpaceObjects';
-import { compareByGeneratedPositionsDeflated } from 'requirejs';
+// import { compareByGeneratedPositionsDeflated } from 'requirejs';
 
 
 
