@@ -8,6 +8,7 @@ const Section1 = () => {
 
             <div className='appbar___section1-div'>
 
+                {/*-----🖼️Profile Pic🖼️-----*/}
                 <div className='appbar__section1-div-img'>
                     <img src={Me} alt='profile_pic' className='img-pic' />
                     <div className='pulse-alignment-div'>
@@ -15,6 +16,7 @@ const Section1 = () => {
                         <span className='pulse-color'></span>
                     </div>
                 </div>
+
                 <div className='testing1'>
                     <h5 className='appbar__section1-h5'>Juan Cortez</h5>
                     <p className='appbar__section1-p p-sub'>Front-end Developer</p>
@@ -40,4 +42,10 @@ export default Section1;
                 <p className='sidebar__section1-p1'>Front-end Developer</p>
                 <p className='sidebar__section1-p2'>Ui/UX Designer</p>
         </div>
+
+
+        <div className='pulse-alignment-div'>
+                        <span className='pulse-div'></span>
+                        <span className='pulse-color'></span>
+                    </div>
 */

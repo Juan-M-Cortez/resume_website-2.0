@@ -122,7 +122,8 @@
   //flex-direction: column;
   height: 100%;
   //padding: 1rem;
-
+  
+  //
   div {
     width: 40px;
     height: 40px;
@@ -138,8 +139,8 @@
     transition: all 0.3s ease-in-out;
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       color: var(--gray-color);
     }
 
@@ -229,7 +230,7 @@
 }
 
 .social-a {
-  height: 20px;
+  // height: 20px;
 }
 
 .a-cert {

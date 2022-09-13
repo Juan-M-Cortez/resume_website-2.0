@@ -58,7 +58,12 @@
     justify-content: center;
     align-items: center;
 
-    height: 259px;
+    //height: 159.500px;
+    width: 50px;
+
+    
+
+    /*
     margin-top: 96px;
     margin-left: 6rem;
 
@@ -66,21 +71,28 @@
     bottom: 0px;
     top: 0px;
     right: 0px;
-
+    */
     
 
     position: absolute;
 
+    /*
     @media screen and (max-width: 900px) {
+        
         margin-top: 160px;
         margin-left: 47px;
     }
     @media screen and (max-width: 630px) {
         margin-left: 6rem;
     }
+    */
 } 
 
 .appbar__section1-div-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
     margin-bottom: 30px;
 }
 
