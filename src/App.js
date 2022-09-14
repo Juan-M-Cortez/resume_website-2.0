@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-// import NasaApi from './Projects/NasaApi/NasaApi';
+import NasaApi from './Projects/NasaApi/NasaApi';
 import Portfolio from './Portfolio';
 import React from 'react'
 // import SpaceObjects from './Projects/NasaApi/container/SpaceObjects/SpaceObjects';
@@ -14,7 +14,7 @@ const App = () => {
       <Routes>
 
         <Route path="/" element={<Portfolio />} />
-        {/* <Route path="/nasa-api" element={<NasaApi />} > */}
+        <Route path="/nasa-api" element={<NasaApi />} />
 
       </Routes>
     </>
