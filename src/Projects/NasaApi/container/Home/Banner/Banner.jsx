@@ -9,11 +9,14 @@ import {
     CardText,
     Button
 } from 'reactstrap';
+import Dates from '../Dates/Dates';
 
 
 const Banner = (props) => {
-    const { imgURL, title, explanation } = props;
-    const reg = /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?/;
+    const { imgURL, title, explanation, voteRecorded, date } = props;
+    // const reg = /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?/;
+
+    console.log('dates: ', date);
 
     let vidCheck;
     !imgURL ?
@@ -35,7 +38,7 @@ const Banner = (props) => {
                 !imgURL ?
                     <ThreeDotsWave /> :
                     (vidCheck > 0 ?
-                        <iframe height="445" src={imgURL} title="youtube-vid"/> :
+                        <iframe height="445" src={imgURL} title="youtube-vid" /> :
                         <img alt="Sample" src={imgURL} />)
             }
             <CardBody>
@@ -57,7 +60,7 @@ const Banner = (props) => {
                     {explanation}
                 </CardText>
 
-                <Button>
+                <Button onClick={() => voteRecorded(date)}>
                     Vote
                 </Button>
 
@@ -68,3 +71,7 @@ const Banner = (props) => {
 }
 
 export default Banner
+
+/*
+onClick={voteRecorded(index)}
+*/
