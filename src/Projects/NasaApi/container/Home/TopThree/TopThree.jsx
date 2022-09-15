@@ -1,5 +1,6 @@
 import { ThreeDotsWave } from '../../../utilities';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './TopThree.scss';
 import {
   Card,
@@ -9,7 +10,27 @@ import {
 } from 'reactstrap';
 
 const TopThree = (props) => {
-  const { imgURL, title, explanation } = props;
+  const [top3Votes, setTop3Votes] = useState({})
+  const [img1Obj, setimg1Obj] = useState({})
+  const [img2Obj, setImg2Obj] = useState({})
+  const [img3Obj, setImg3Obj] = useState({})
+
+  const { imgURL, title, explanation, initialImgDate } = props;
+
+  const urlTopThree = `https://api.nasa.gov/planetary/apod?date=${initialImgDate.img1}&api_key=AgviLJFwUuAOU5MIUkxa0OCdj6bpCnRWwDOA4WsO`;
+
+  console.log('TopThree url:', initialImgDate.img1);
+
+  useEffect(() => {
+    axios.get(urlTopThree)
+      .then(obj => {
+        console.log(obj);
+      })
+      .catch(err => {
+        console.log('err', err);
+      })
+  }, [urlTopThree])
+
 
   return (
     <div className='nasa__topthree'>
@@ -22,9 +43,9 @@ const TopThree = (props) => {
           alignSelf: 'flex-start'
         }}
       >
-        {!imgURL[0] ?
+        {!top3Votes.data ?
           <ThreeDotsWave /> :
-          <img src={imgURL[0]} alt="apod img" />
+          <img src={top3Votes.data.hdurl} alt="apod img" />
         }
 
         <CardTitle tag="h5" className='topthree-title'>

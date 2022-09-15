@@ -6,13 +6,15 @@ import TopThree from './TopThree/TopThree';
 import Dates from './Dates/Dates';
 import './Home.scss';
 
-const initialVotes = { img1: 0, img2: 0, img3: 0 };
+const initialVotes = { votes1: 0, votes2: 0, votes3: 0 };
+const initialImgDate = { img1: '', img2: '', img3: '' };
+
 const recordedVotes = {};
 let dateValidation = [];
 
 const Home = (props) => {
   const [indexDay, setIndexDay] = useState(9)
-  const [topt3Votes, setTop3Votes] = useState({ ...initialVotes })
+  const [top3Votes, setTop3Votes] = useState({ ...initialVotes })
 
   const { imgURL, title, explanation, dates } = props;
 
@@ -28,7 +30,7 @@ const Home = (props) => {
   //---------records all votes being process---------
   const voteRecorded = (date) => {
     let pass = dateValidation.filter(dateCheck => dateCheck === date)
-   
+
     if (!dateValidation[0] || !pass[0]) {
       dateValidation.push(date);
       recordedVotes[date] = 1;
@@ -39,47 +41,51 @@ const Home = (props) => {
 
     assignTopThree();
 
-    console.log(recordedVotes);
+    console.log('recordedVotes: ', recordedVotes);
   }
 
+  //---------Assigns top 3---------
   const assignTopThree = () => {
 
-    let exclude = [];
-
     for (const votes in recordedVotes) {
+      if (initialVotes.votes1 < 0) {
+        initialVotes.votes1 = recordedVotes[votes];
+        initialImgDate.img1 = votes;
 
-      console.log(`TESTING: ${votes}: ${recordedVotes[votes]}`);
+      } else if (initialVotes.votes1 < recordedVotes[votes]) {
+        initialVotes.votes1 = recordedVotes[votes];
+        initialImgDate.img1 = votes;
+
+      }
     }
+    // console.log('initialImgDate: ', initialImgDate);
+    // console.log('initialVotes: ', initialVotes);
   }
-
-  // const arrangeTopThree = () => {
-  //   let exclude = [];
-
-  //   for (let index = 0; index < array.length; index++) {
-  //     const element = array[index];
-      
-  //   }
-
-    // loop trough recordedVotes
-    // check for the greates > int and assign it to a img1
-    // check for the 2nd greates > (excluding the key that was assign to img1) assign it to img2
-    // check for the 3rd greates > excluding 1st and 2nd keys
-
-
-
-  
-
 
   return (
     <section className='nasa__home'>
+
       <div className='nasa__home-banner'>
-        <Banner imgURL={imgURL[indexDay]} title={title[indexDay]} explanation={explanation[indexDay]} voteRecorded={voteRecorded} date={dates[indexDay]} />
+        <Banner
+          imgURL={imgURL[indexDay]}
+          title={title[indexDay]}
+          explanation={explanation[indexDay]}
+          voteRecorded={voteRecorded}
+          date={dates[indexDay]}
+        />
         <div className='filler' />
       </div>
+
       <div className='nasa_home-topthree'>
         <Dates dates={dates} pickADate={pickADate} />
-        <TopThree imgURL={imgURL} explanation={explanation} title={title} />
+        <TopThree
+          imgURL={imgURL}
+          explanation={explanation}
+          title={title}
+          initialImgDate={initialImgDate}
+        />
       </div>
+
     </section>
   );
 };
