@@ -11,11 +11,12 @@ const App = () => {
   // console.log(window.location);
   return (
     <>
+      <p>hello</p>
       <Routes>
 
         <Route path="/" element={<Portfolio />} />
         <Route path="/nasa-api" element={<NasaApi />} />
-
+        
       </Routes>
     </>
   )
