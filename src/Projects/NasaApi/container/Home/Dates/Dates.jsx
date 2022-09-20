@@ -31,9 +31,15 @@ function Dates(props) {
         dateList = ['Loading...']
 
     const indexFlip = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+<<<<<<< HEAD
     
     const toggle = () => setDropdownOpen((prevState) => !prevState);
     
+=======
+
+    const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+>>>>>>> 9fe53012f6a3a7c94c05bdb1f7bbfaec06c32c0e
     return (
         <div className="d-flex p-5">
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
