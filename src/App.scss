@@ -125,18 +125,24 @@
   
   //
   div {
+    
+    margin-top: 0;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: var(--white-color);
     margin: 0.25rem 1.9rem 1px;
-    border: 1px solid var(--lightGray-color);
+    // border: 1px solid var(--lightGray-color);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     transition: all 0.3s ease-in-out;
+
+    a {
+      height: 27px;
+    }
 
     svg {
       width: 25px;
@@ -203,8 +209,7 @@
 
 @media screen and (max-width: 500px) {
 
-  .app__navigation {
-  }
+  .app__navigation {}
 
   .copyright {
     padding: 2rem;
@@ -226,7 +231,7 @@
   margin: 0.5rem;
   transition: background-color .2s ease-in-out;
   width: 10px;
-  
+
 }
 
 .social-a {
