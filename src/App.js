@@ -11,6 +11,7 @@ const App = () => {
   // console.log(window.location);
   return (
     <>
+    <p>TEST</p>
       <Routes>
       
         <Route path="/" element={<Portfolio />} />
