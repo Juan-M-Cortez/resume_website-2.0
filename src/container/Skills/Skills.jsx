@@ -55,9 +55,12 @@ const Skills = () => {
         <div className="app__skills-exp">
 
           {/*----------------------BLOCK: Creating Div Experience----------------------*/}
-          {experiences.map((experience) => {
-            countWork++;
-            if (countWork === 1) {
+          {/*-----------------------------------------------------------------------*/}
+          {console.log("experiences: ", experiences)}
+
+          {experiences.slice(0).reverse().map((experience) => {
+            console.log('experienceMap: ',experience.year)
+            
             /*----------------------1st: IF----------------------*/
             return (
               <motion.div
@@ -110,8 +113,7 @@ const Skills = () => {
               </motion.div>
             )}
             /*----------------------2nd: ELSE----------------------*/
-            else return console.log('');
-          })}
+           )}
           {/*----------------------BLOCK-END: Creating Div Experience----------------------*/}
         </div>
         

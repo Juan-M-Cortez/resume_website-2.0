@@ -1,4 +1,5 @@
 import Me from '../../../assets/me.jpg';
+import MeTwo from '../../../assets/me2.png';
 import React from 'react';
 import './Section1.scss';
 
@@ -10,7 +11,7 @@ const Section1 = () => {
 
                 {/*-----🖼️Profile Pic🖼️-----*/}
                 <div className='appbar__section1-div-img'>
-                    <img src={Me} alt='profile_pic' className='img-pic' />
+                    <img src={MeTwo} alt='profile_pic' className='img-pic' />
                     <div className='pulse-alignment-div'>
                         <span className='pulse-div'></span>
                         <span className='pulse-color'></span>
@@ -20,7 +21,7 @@ const Section1 = () => {
                 <div className='testing1'>
                     <h5 className='appbar__section1-h5'>Juan Cortez</h5>
                     <p className='appbar__section1-p p-sub'>Front-end Developer</p>
-                    <p className='appbar__section1-p p-sub'>React JS Designer</p>
+                    <p className='appbar__section1-p p-sub'>React.Js / WordPress Developer</p>
                 </div>
             </div>
         </div>
