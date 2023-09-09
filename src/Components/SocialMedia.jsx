@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 const SocialMedia = () => (
   <div className="app__social">
     <div>
-      <a className='social-a' href='https://github.com/Jud3hawk'>
+      <a className='social-a' href='https://github.com/Juan-M-Cortez'>
         <BsGithub />
       </a>
     </div>
