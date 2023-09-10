@@ -57,8 +57,9 @@ const Skills = () => {
           {/*----------------------BLOCK: Creating Div Experience----------------------*/}
           {/*-----------------------------------------------------------------------*/}
           {console.log("experiences: ", experiences)}
-
-          {experiences.slice(0).reverse().map((experience) => {
+          
+          {/* {experiences.slice(0).reverse().map((experience) => { */}
+          {experiences.sort((a, b) => b.year - a.year).map((experience) => {
             console.log('experienceMap: ',experience.year)
             
             /*----------------------1st: IF----------------------*/
@@ -69,6 +70,7 @@ const Skills = () => {
               >
                 <div className="app__skills-exp-year">
                   <p className="bold-text">{experience.year}</p>
+                  {console.log("Object" ,experience)}
                 </div>
                 <motion.div className="app__skills-exp-works">
 
@@ -76,7 +78,9 @@ const Skills = () => {
                     return (
 
                       <React.Fragment key={`Fragment-${workIndex}`}>
-
+                        
+                      {/*----------------------BLOCK: Name, Company & Pop-Up Description ----------------------*/}
+                      
                         <motion.div
                           whileInView={{ opacity: [0, 1] }}
                           transition={{ duration: 0.5 }}
@@ -85,9 +89,11 @@ const Skills = () => {
                           data-for={work.name}
                           key={work.name}
                         >
+                          {/*------- Title & Company -------*/}
                           <h4 className="bold-text">{work.name}</h4>
                           <p className="p-text">{work.company}</p>
                         </motion.div>
+                       
 
                         {/*----------------------BLOCK: Tooltip----------------------
                                         🚧!creates 2 work experiences!🚧
@@ -113,7 +119,8 @@ const Skills = () => {
               </motion.div>
             )}
             /*----------------------2nd: ELSE----------------------*/
-           )}
+           )
+           }
           {/*----------------------BLOCK-END: Creating Div Experience----------------------*/}
         </div>
         
