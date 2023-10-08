@@ -1,14 +1,15 @@
 import compilerImg from '../../../assets/compilerImg2.png';
 import TypingAnimation from './TypingAnimation/TypingAnimation';
-import IntroVideo from '../../../assets/sample.mp4';
 import React, {useRef, useEffect} from 'react';
+import MyVideo from './sample.mp4';
 import './Banner.scss';
 
 const Banner = () => {
-
+/*
   const videoRef = useRef(null);
 
   useEffect(() => {
+    
     const videoElement = videoRef.current;
 
     const handleLoadedMetadata = () => {
@@ -24,7 +25,7 @@ const Banner = () => {
       videoElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
     };
   }, []);
-
+  */
   return (
     <div className='app__banner'>
       {/*-- <TypingAnimation /> */}
@@ -32,9 +33,8 @@ const Banner = () => {
       {/* Banner Video */}
       <div className='video-container'>
         {/*<video controls autoPlay muted>*/}
-        <video autoPlay controls ref={videoRef}>
-          <source src={IntroVideo} type="video/mp4" />
-          Your browser does not support the video tag.
+        <video autoPlay controls muted>
+          <source src={MyVideo} type="video/mp4" />
         </video>
       </div>
 
