@@ -1,7 +1,7 @@
 import compilerImg from '../../../assets/compilerImg2.png';
 import TypingAnimation from './TypingAnimation/TypingAnimation';
 import React, {useRef, useEffect} from 'react';
-import MyVideo from './sample.mp4';
+import MyVideo from './sample2.webm';
 import './Banner.scss';
 
 const Banner = () => {
@@ -34,7 +34,7 @@ const Banner = () => {
       <div className='video-container'>
         {/*<video controls autoPlay muted>*/}
         <video autoPlay controls muted>
-          <source src={MyVideo} type="video/mp4" />
+          <source src={MyVideo} type="video/webm" />
         </video>
       </div>
 
